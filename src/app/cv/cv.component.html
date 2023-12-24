@@ -1,0 +1,116 @@
+<head>
+    <title>Curriculum vitae</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div  *ngFor = "let cv of cv " class="cla">
+      <div class="cv-container">
+        <div class="left-column">
+          <img class="portait" src="https://scontent.frba3-2.fna.fbcdn.net/v/t39.30808-6/269850102_4604748632979379_7233134288374720716_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=09cbfe&_nc_eui2=AeHTwJcXSu7sUDko12MrhSPcefNo48t4QqB582jjy3hCoN8jn2UUWk7jwxgeOM41gaF5E7ElTOqzzaQCB0IFE_nC&_nc_ohc=O04RJtjDbI0AX9OIVtl&_nc_ht=scontent.frba3-2.fna&oh=00_AfCnCIa_S4YUxR_tmmSCJACn6t1q1efx3OKzcBnxh7nI6g&oe=63F45425" />
+          <div class="section">
+            <p>
+              <i class="icon fab fa-linkedin text-darkblue"></i> {{cv.nom}} {{cv.prenom}}
+            </p>
+          </div>
+          <div class="section">
+            <h2>À PROPOS</h2>
+            <p>
+              Le <strong>Front-end</strong> est une de mes passions : j’aime intégrer ou imaginer des interfaces modernes, les rendre responsive et les dynamiser avec des animations élégantes. Mes deux technos de coeur sont <strong>Angular</strong> et <strong>Bootstrap</strong>, que j’utilise depuis plus de 6 ans. Je suis aussi Fullstack : PHP, MySQL, Doctrine… 
+            </p>
+           
+          </div>
+          <div class="section">
+            <h2>COMPÉTENCES</h2>
+            <ul class="skills">
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>{{cv.competence}}</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Bootstrap</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>HTML5 &#124; CSS3 &#124; SASS</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>Javascript</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>jQuery</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> <strong>npm &#124; Webpack</strong></li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> PHP</li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> Zend Framework</li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> MySQL</li>
+              <li><i class="icon fas fa-check-circle text-darkblue"></i> Git &#124; Github</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Langues</h2>
+            <p>
+              {{cv.langue}}, langue maternelle
+              <br>
+              Anglais, compétence professionnelle
+            </p>
+          </div>
+          <div class="section">
+            <h2>Centres d'intérêt</h2>
+            <p>
+              {{cv.loisires}}
+              
+              
+            </p>
+          </div>
+        </div>
+        <div class="right-column">
+          <div class="header">
+            <h1>{{cv.nom}} <span class="text-blue text-uppercase">{{cv.prenom}}</span></h1>
+            <p>Freelance Front-end Developer</p>
+            <ul class="infos">
+              <li><i class="icon fas fa-at text-blue"></i> <a href="mailto:contact@pgomba.com">{{cv.email}}</a></li>
+              <li><i class="icon fas fa-phone text-blue"></i>{{cv.tel}}</li>
+              <li><i class="icon fas fa-map-marker-alt text-blue"></i> {{cv.adresse}}</li>
+            </ul>
+          </div>
+          <div class="content">
+            <div class="section">
+              <h2>Expériences <br><span class="text-blue">professionelles</span></h2>
+              <p>
+                <strong>2015 <i class="fas fa-long-arrow-alt-right"></i> 2021</strong>
+                <br>
+                {{cv.experience}}
+              </p>
+            
+            </div>
+            <div class="section">
+              <p>
+                <strong>2021</strong>
+                <br>
+                {{cv.experience2}}
+              </p>
+              
+            </div>
+            <div class="section">
+              <h2>Études <br><span class="text-blue">& formations</span></h2>
+              <p>
+                <strong>2016 <i class="fas fa-long-arrow-alt-right"></i> 2017</strong>
+                <br>
+                <em>{{cv.formation}}</em>
+              </p>
+              <p>
+                <strong>2018</strong>
+                <br>
+                <em>{{cv.formation2}}</em>
+              </p>
+             
+            </div>
+            <div class="section">
+              <h2>Autres <br><span class="text-blue">expériences</span></h2>
+              <p>
+                Permis B, possession d’une voiture
+                <br>
+                Animateur Scout pendant 6 ans
+                <br>
+                Brevet d’animateur de Centre de Vacances
+              </p>
+            </div>
+          </div>
+        </div>
+      </div></div>
+  </body>

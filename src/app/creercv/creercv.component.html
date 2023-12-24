@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+
+</head>
+<body>
+
+    <div class="main">
+
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <div class="form-input">
+                                    <label for="first_name" class="required">Nom</label>
+                                    <input type="text" name="first_name" id="first_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="last_name" class="required">Prenom</label>
+                                    <input type="text" name="last_name" id="last_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="company" class="required">Téléphone</label>
+                                    <input type="text" name="company" id="company" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="email" class="required">Email</label>
+                                    <input type="text" name="email" id="email" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="phone_number" class="required">Adresse</label>
+                                    <input type="text" name="phone_number" id="phone_number" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-select">
+                              
+                                </div>
+                               
+                                <div class="form-input">
+                                    <label for="chequeno">EXPÉRIENCES PROFESSIONELLES</label>
+                                    <input type="text" name="chequeno" id="chequeno" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="blank_name">ÉTUDES & FORMATIONS</label>
+                                    <input type="text" name="blank_name" id="blank_name" />
+                                </div>
+                                <div class="form-input">
+                                    <label for="payable">Langue</label>
+                                    <input type="text" name="payable" id="payable" />
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="payable">Competénce</label>
+                                    <input type="text" name="payable" id="payable" />
+                                </div>
+
+                                <div class="form-input">
+                                    <label for="payable">Centre d'intérêt</label>
+                                    <input type="text" name="payable" id="payable" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                          <label for="email">Image</label>
+                          
+                          <div class="alert-danger">
+                           
+                          </div>
+                          
+                          <div class="row">
+                            <div class="col-8">
+                              <label class="btn btn-default p-0">
+                                <input type="file" multiple (change)="selectFiles($event)" />
+                              </label>
+                            </div>
+                          <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+                            <span>{{ progressInfo.fileName }}</span>
+                            <div class="progress">
+                              <div
+                                class="progress-bar progress-bar-info"
+                                role="progressbar"
+                                attr.aria-valuenow="{{ progressInfo.value }}"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                [ngStyle]="{ width: progressInfo.value + '%' }"
+                              >
+                                {{ progressInfo.value }}%
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div *ngIf="message.length" class="alert alert-secondary my-3" role="alert">
+                            <ul *ngFor="let msg of message; let i = index">
+                              <li>{{ msg }}</li>
+                            </ul>
+                           </div>
+                        </div>
+                          
+                          
+                
+                
+                        </div>
+                        </div>
+                       
+                        <div class="form-submit">
+                            <button type="button"  (click) = "goCv()" class="submit" id="submit" name="submit" >Créez mon cv</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
